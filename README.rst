@@ -43,9 +43,9 @@ basic usage:
     Sergey Ragatsky 
     
 :Contributors: 
-    Tal Ben Basat    
-    Nicole Franco    
-    Roy Klinger   
+    Tal Ben Basat,
+    Nicole Franco,
+    Roy Klinger,
     Maroun Maroun     
     
 :Version: 1.0 of 25/11/2014 
