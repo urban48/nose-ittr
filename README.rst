@@ -12,12 +12,12 @@ Main Features:
 
 basic usage:
 ------------
-        
+
 .. code-block:: python
 
-    from nose.tools import ok_
-    from nose_ittr import IttrMultiplayer, ittr    
-    
+    from nose.tools import assert_equal
+    from nose_ittr import IttrMultiplayer, ittr
+
     class TestFoo(object):
         
         __metaclass__ = IttrMultiplayer
@@ -30,22 +30,37 @@ basic usage:
             
         @ittr(number=[1, 2, 3, 4])
         def test_even(self):
-            ok_(self.number % )
+            assert_equal(self.number % 2, 0)
             
         
-        @ittr(param_one=['case_one', 'case_two'], param_two=['case_three', 'case_four'])
-        def test_bar(self):
-            # do test
-            print self.param_one, self.param_two
-            
+        @ittr(numerator=[15, 6], denominator=[2, 3])
+        def test_no_remainder(self):
+                assert_equal(self.numerator % self.denominator, 0)
+                
+result:
+                   
+.. code-block:: sh
+
+        TestFoo.test_even_1 ... FAIL
+        TestFoo.test_even_2 ... .ok
+        TestFoo.test_even_3 ... FAIL
+        TestFoo.test_even_4 ... .ok
+        TestFoo.test_no_remainder_2_6 ... .ok
+        TestFoo.test_no_remainder_2_15 ... FAIL
+        TestFoo.test_no_remainder_3_6 ... .ok
+        TestFoo.test_no_remainder_3_15 ... .ok
+
+
+
 
 :Authors:
     Sergey Ragatsky 
-    
 :Contributors: 
-    Tal Ben Basat,
-    Nicole Franco,
-    Roy Klinger,
-    Maroun Maroun     
-    
+    Tal Ben Basat
+  
+    Nicole Franco  
+
+    Roy Klinger 
+ 
+    Maroun Maroun  
 :Version: 1.0 of 25/11/2014 
