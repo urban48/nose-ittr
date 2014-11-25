@@ -1,18 +1,20 @@
 nose-ittr
 =========
-nose expansion for supporting parametrized testing.
+nose extension for supporting parametrized testing.
 ---------------------------------------------------
 Allow developer to run the same test over and over again using different values
 
 Main Features:
-- Very easy to integrate with existing tests.
-- Saves a lot of boilerplate code, and code replication.
-- Work with all nose plugins (including multiprocessing).
+ * Very easy to integrate with existing tests.
+ * Saves a lot of boilerplate code, and code replication.
+ * Work with all nose plugins (including multiprocessing).
 
 Installation:
 ------------
-.. code-block:: sh
-    pip install nose-ittr
+
+.. code-block:: shell
+
+    pip install nose_ittr
 
 Basic usage:
 ------------
@@ -43,7 +45,7 @@ Basic usage:
                 
 result:
                    
-.. code-block:: sh
+.. code-block:: shell
 
         TestFoo.test_even_1 ... FAIL
         TestFoo.test_even_2 ... .ok
@@ -55,7 +57,12 @@ result:
         TestFoo.test_no_remainder_3_15 ... .ok
 
 
+**notes:**
+ * Dosen't affect setup
+ * Dosen't affect test docstring if used with -v parameter.
 
+To change the docstring printout based on the varibales passed to test, use the pluging 
+`nose-docstring-modifier <https://pypi.python.org/pypi/nose-docstring-modifier/>`_.
 
 :Authors:
     Sergey Ragatsky 
