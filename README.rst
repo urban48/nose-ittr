@@ -2,15 +2,19 @@ nose-ittr
 =========
 nose expansion for supporting parametrized testing.
 ---------------------------------------------------
-allow developer to run the same test over and over again using different values
+Allow developer to run the same test over and over again using different values
 
 Main Features:
 - Very easy to integrate with existing tests.
 - Saves a lot of boilerplate code, and code replication.
 - Work with all nose plugins (including multiprocessing).
 
+Installation:
+------------
+.. code-block:: sh
+    pip install nose-ittr
 
-basic usage:
+Basic usage:
 ------------
 
 .. code-block:: python
